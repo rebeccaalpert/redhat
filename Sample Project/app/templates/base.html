@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Sample Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/styles.css">
+  </head>
+  <body>
+  	<div class="container">
+	    <h1 id="name"></h1>
+	    <table class="table table-striped">
+	      <tr>
+	        <th>Username</th>
+	        <td id="username"></td>
+	      </tr>
+	      <tr>
+	        <th>Email</th>
+	        <td id="email"></td>
+	      </tr>
+	      <tr>
+	        <th>Address</th>
+	        <td id="address"></td>
+	      </tr>
+	      <tr>
+	      	<th>Geo</th>
+	      	<td id="geo"></td>
+	      </tr>
+	      <tr>
+	      	<th>Phone</th>
+	      	<td id="phone"></td>
+	      </tr>
+	      <tr>
+	      	<th>Website</th>
+	      	<td id="website"></td>
+	      </tr>
+	      <tr>
+	      	<th>Company</th>
+	      	<td id="company"></td>
+	      </tr>
+	      <tr>
+	      	<th>Company Catchphrase</th>
+	      	<td id="catchphrase"></td>
+	      </tr>
+	      <tr>
+	      	<th>Company BS</th>
+	      	<td id="bs"></td>
+	      </tr>
+	    <tbody>
+	    </tbody>
+	  </table>
+	 </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script>
+    	$(document).ready(function () {
+	    	$.getJSON( "http://jsonplaceholder.typicode.com/users", function( data ) {
+			  var id = {{user}}
+			  for (var i = 0; i < data.length; i++) {
+			  	if (data[i].id == id) {
+			  		$("#name").text(data[i].name);
+			  		$("#username").append(data[i].username);
+			  		$("#email").append("<a href='mailto:" + data[i].email + "'>" + data[i].email + "</a>");
+			  		$("#address").append(data[i].address.street + ", " + data[i].address.suite + "<br />" + data[i].address.city + ", " + " " + data[i].address.zipcode);
+			  		$("#geo").append(data[i].address.geo.lat + ", " + data[i].address.geo.lng);
+			  		$("#phone").append(data[i].phone);
+			  		$("#website").append("<a href='http://" + data[i].website + "'>" + data[i].website + "</a>");
+			  		$("#company").append(data[i].company.name);
+			  		$("#catchphrase").append(data[i].company.catchPhrase);
+			  		$("#bs").append(data[i].company.bs);
+			  	}	
+			  }
+			});
+		});
+    </script>
+  </body>
+</html>
