@@ -38,11 +38,6 @@
 			  	$("tbody").append("<tr><td><a class='user' id='" + data[i].id + "' href='/" + data[i].id + "'>" + data[i].name + "</a></td><td>" + data[i].username + "</td><td><a href='mailto:" + data[i].email + "'>" + data[i].email + "</a></td><td>" + data[i].address.street + ", " + data[i].address.suite + "<br />" + data[i].address.city + ", " + " " + data[i].address.zipcode + "</td></tr>");	
 			  }
 			});
-			// get value of clicked employee
-			$(document).on('click', '.user', function(){
-				var name = $(this).attr('id');
-				console.log(name);
-			});
 		});
     </script>
   </body>
