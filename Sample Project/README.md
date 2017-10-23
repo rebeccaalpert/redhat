@@ -5,5 +5,5 @@ Sample App loads data from [jsonplaceholder.com](http://jsonplaceholder.typicode
 I used Flask (for routing) and HTML/JQuery (for loading and displaying data). This was my first Flask project. I wasn't sure how to use a build tool to run/develop/deploy the application, but I'd love to learn.
 
 To run the app on your local machine, type in the following in the terminal after unzipping the application:
-	* pip install -r requirements.txt
-	* export FLASK_APP=run.py
+* pip install -r requirements.txt
+* export FLASK_APP=run.py
