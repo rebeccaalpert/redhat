@@ -21,7 +21,7 @@ I learn new technologies when they'll positively impact the projects I'm working
 ## Section 2 - Deployment
 
 ### Q1
-**Describe the approach you take to testing your applications**  
+**Describe the approach you take to testing your applications.**  
 I write front-end code on a regular basis in my internship at Evergage. I use Javascript/JQuery to map website catalogs and I use HTML, CSS, and JQuery to create new website components. I test everything I make, and I also QA other people's website components.
 
 When it comes to catalog mapping, I check Chrome Developer Tools to make sure that the Evergage platform is receiving the right information. I also QA a wide selection of imported catalog items in the Evergage platform to make sure that the data is formatted appropriately.
