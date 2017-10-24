@@ -29,3 +29,5 @@ remoteMathService(function(err, answer) {
 		console.log("correct");
 	}
 });
+
+module.exports = remoteMathService;
